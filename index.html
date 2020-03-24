@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="aset/bootstrap/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="aset/fontawesome/css/all.css" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+
+<body>
+    <style type="text/css">
+        .satu {
+            font-size: 24pt;
+        }
+
+        .dua {
+            font-size: 15pt;
+        }
+    </style>
+
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ic_account_circle_48px.svg/600px-Ic_account_circle_48px.svg.png"
+        class="rounded-circle" widht="150pt" height="150pt">
+    <div class="col-md-8 text-black rounded m-2">
+        <!-- kolom kedua berisi profil singkat -->
+        <p class="dua text-left mt-4">
+            Nama : Clara Adelia Fransiska
+        </p>
+        <p class="dua text-left">
+            NIM : 201701027
+        </p>
+        <p class="dua text-left">
+            No.Tlp : 08976247975
+        </p>
+        <p class="dua text-left">
+            Email : claraadelia592@gmail.com
+        </p>
+
+        <p class="dua text-left">
+            Alamat : Jl.Prof. Moch.Yamin No.11a
+        </p>
+    </div>
+    <div class="card-group">
+        <div class="card">
+
+            <div class="card-body">
+                <h5 class="card-title">Nilai Rata-rata Ujian</h5>
+                <p class="card-text">
+                    <div id="tulis1"></div>
+                    <div id="tulis2"></div>
+                    <div id="praktek"></div>
+                    <h5>
+                        <div id="nilaiujian"></div>
+                    </h5>
+                </p>
+
+
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="card-body">
+                <h3 class="card-title">Score Toefl</h1>
+                    <p class="card-text">
+                        <h3>
+                            <div id="toefl1"></div>
+                        </h3>
+                        <div id="toefl"></div>
+                    </p>
+
+
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="card-body">
+                <h5 class="card-title">Status Beasiswa</h5>
+                <p class="card-text">
+                    <div id="beasiswa"></div>
+                </p>
+                <h5>
+                    <div id="nilai"></div>
+                </h5>
+
+            </div>
+        </div>
+    </div>
+
+   <style>
+       body {
+        background: #e2e1e0;
+        text-align: center;
+      }
+      
+      .card {
+        background: #fff;
+        border-radius: 2px;
+        display: inline-block;
+        height: 250px;
+        margin: 1rem;
+        position: relative;
+        width: 300px;
+      }
+   </style>
+
+   <script>
+       var ujiantulis1= document.getElementById("tulis1");
+var ujiantulis2 = document.getElementById("tulis2");
+var ujianpraktek = document.getElementById("praktek");
+var hasilujian  = document.getElementById("nilaiujian");
+
+var tulis1 = 80;
+var tulis2 = 90;
+var praktek = 85;
+var nilaiujian = (tulis1 + tulis2 + praktek) / 3;
+
+ujiantulis1.innerHTML = "Nilai Ujian Tulis UTS : " + tulis1;
+ujiantulis2.innerHTML = "Nilai Ujian Tulis UAS : " + tulis2;
+ujianpraktek.innerHTML = "Nilai Ujian Praktek : " + praktek;
+hasilujian.innerHTML = "Nilai Rata-rata Ujian : " + nilaiujian;
+
+
+var nilaitoefl= document.getElementById("toefl");
+var scoretoefl= document.getElementById("toefl1");
+var toefl = 500;
+var toefl1 = 500;
+
+
+if(toefl >= 500){
+ nilaitoefl.innerHTML = "Nilai 100";
+}
+else if(toefl > 450){
+  nilaitoefl.innerHTML = "Nilai 85";
+}
+else if(toefl < 450){
+  nilaitoefl.innerHTML = "Nilai 50";
+}
+
+scoretoefl.innerHTML = "Score : " + toefl1;
+
+var statusbeasiswa= document.getElementById("beasiswa");
+
+var nilaitoefl = 90;
+var beasiswa = (nilaiujian + nilaitoefl) / 2;
+
+var statusbsw= document.getElementById("nilai");
+
+var nilai= 91
+if(nilai > 90){
+ statusbsw.innerHTML = "LULUS";
+}
+else if(nilai < 85){
+  statusbsw.innerHTML = "TIDAK LULUS";
+}
+statusbeasiswa.innerHTML = "Nilai : " + beasiswa;
+
+
+   </script>
